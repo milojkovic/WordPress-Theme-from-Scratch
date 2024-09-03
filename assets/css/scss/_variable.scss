@@ -1,0 +1,41 @@
+/* ==========================================================================
+   Typography variables
+   ========================================================================== */
+
+$text-font: 'Monument', sans-serif;
+$text-color: #000000;
+$text-font-size: 17px;
+$text-line-height: 27px;
+$text-font-weight: 400;
+
+$heading-font: 'Monument', sans-serif;
+$heading-color: #000000;
+$header-height: 80px;
+
+$additional-text-font: 'Shockwave', sans-serif;
+
+$transition-timing: .2s ease-out;
+$color-transition: color $transition-timing;
+$background-color-transition: background-color $transition-timing;
+$border-color-transition: border-color $transition-timing;
+$opacity-transition: opacity $transition-timing;
+
+$sliding-area-transition-time: .6s;
+$sliding-area-transition-timing: $sliding-area-transition-time cubic-bezier(.77, 0, .175, 1);
+$sliding-area-transition: all $sliding-area-transition-timing;
+
+$screen-size-1368: 1368px;
+$screen-size-1024: 1024px;
+$screen-size-768: 768px;
+$screen-size-680: 680px;
+
+/* ==========================================================================
+   Box variables
+   ========================================================================== */
+$page-content-padding: 130px 0 100px;
+$side-padding: 40px;
+$full-width-side-padding: 0 $side-padding;
+$border-color: #000000;
+$border-radius: 4px;
+$box-shadow: 3px 3px 15px 0 rgba($heading-color, .5);
+

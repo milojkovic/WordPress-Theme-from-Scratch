@@ -1,0 +1,246 @@
+/* ==========================================================================
+   Typography variables
+   ========================================================================== */
+/* ==========================================================================
+   Box variables
+   ========================================================================== */
+/* ==========================================================================
+   Typography mixins
+   ========================================================================== */
+@font-face {
+  font-family: Shockwave;
+  src: url(/wp-content/themes/my-theme/assets/fonts/Shockwave.ttf) format("truetype"); }
+@font-face {
+  font-family: Monument;
+  src: url(/wp-content/themes/my-theme/assets/fonts/MonumentExtended-Regular.otf) format("opentype"); }
+/* ==========================================================================
+   Page styles
+   ========================================================================== */
+#mytheme-page-header {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  height: 80px;
+  background-color: #d1d1d1;
+  z-index: 100; }
+  @media only screen and (max-width: 768px) {
+    #mytheme-page-header {
+      height: auto;
+      border-bottom: 1px solid #684848; } }
+  #mytheme-page-header .mytheme-page-header-inner {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    padding: 0 100px; }
+    @media only screen and (max-width: 768px) {
+      #mytheme-page-header .mytheme-page-header-inner {
+        padding: 0; } }
+    #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      height: 100%; }
+      #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .header-logo {
+        position: relative;
+        height: 100%;
+        display: inline-flex;
+        align-items: center; }
+      #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation {
+        position: relative;
+        height: 100%; }
+        #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation ul li {
+          position: relative;
+          margin: 0;
+          padding: 0; }
+          #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation ul li a {
+            padding-left: 0;
+            padding-right: 0; }
+          #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation ul li .sub-menu {
+            display: none;
+            position: absolute;
+            z-index: 999;
+            top: 100%;
+            left: 0;
+            background: #fff;
+            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+            width: 200px; }
+            #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation ul li .sub-menu a {
+              color: #000000;
+              padding: 10px 10px 5px 20px;
+              display: block;
+              text-decoration: none; }
+              #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation ul li .sub-menu a:hover {
+                color: #676767;
+                transition: all 0.1s ease-in-out; }
+        #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation ul > .menu-item-has-children:hover > .sub-menu {
+          display: block;
+          left: -19px; }
+        #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation ul .menu-item-has-children .sub-menu {
+          font-family: Monument, sans-serif;
+          font-size: 14px;
+          line-height: 21px;
+          letter-spacing: 0;
+          color: #000; }
+          #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation ul .menu-item-has-children .sub-menu > .menu-item-has-children:hover .sub-menu {
+            display: block; }
+        #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation > ul {
+          position: relative;
+          display: flex;
+          align-items: center;
+          height: 100%;
+          white-space: nowrap;
+          margin-left: auto; }
+          #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation > ul > li {
+            height: 100%;
+            margin: 0 10px; }
+            #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation > ul > li:first-child {
+              margin-left: 0; }
+            #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation > ul > li:last-child {
+              margin-right: 0; }
+            #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation > ul > li > a {
+              position: relative;
+              display: flex;
+              align-items: center;
+              height: 100%;
+              font-family: "Monument", sans-serif;
+              font-size: 18px;
+              line-height: 21px;
+              letter-spacing: 0;
+              color: #000000;
+              text-transform: uppercase;
+              text-decoration: none; }
+              #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation > ul > li > a:after {
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 9px;
+                background-color: #f42f00;
+                bottom: 30px;
+                left: 0;
+                z-index: -1;
+                transform: scaleX(0);
+                transform-origin: right;
+                transition: transform 0.32s cubic-bezier(0.31, 0.29, 0.05, 0.96);
+                margin: 0;
+                border: 0; }
+              #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation > ul > li > a:hover {
+                color: #000000; }
+                #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation > ul > li > a:hover:after {
+                  transform-origin: left;
+                  transform: scaleX(1); }
+            #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation > ul > li.active > a {
+              color: #000000; }
+              #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation > ul > li.active > a:after {
+                transform-origin: left;
+                transform: scaleX(1); }
+        #mytheme-page-header .mytheme-page-header-inner .mytheme-header-wrapper .mytheme-header-navigation.collapse.show {
+          padding: 20px 0; }
+  #mytheme-page-header.mytheme-dark-header {
+    background-color: transparent;
+    top: 50px; }
+    #mytheme-page-header.mytheme-dark-header .mytheme-page-header-inner .mytheme-header-navigation > ul > li > a {
+      color: #ffffff; }
+      #mytheme-page-header.mytheme-dark-header .mytheme-page-header-inner .mytheme-header-navigation > ul > li > a:hover {
+        color: #ffffff; }
+    #mytheme-page-header.mytheme-dark-header .mytheme-page-header-inner .mytheme-header-navigation > ul > li.active > a {
+      color: #ffffff; }
+
+#mytheme-index-wrapper {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top; }
+  #mytheme-index-wrapper .mytheme-main-content-area {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url("/wp-content/themes/my-theme/assets/img/hero-banner.jpg");
+    background-color: #cccccc;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+    margin: 0;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin-top: -80px; }
+    #mytheme-index-wrapper .mytheme-main-content-area .mytheme-custom-font {
+      text-align: center;
+      font-size: 213px;
+      line-height: 189px;
+      font-family: "Shockwave", sans-serif;
+      letter-spacing: 0;
+      color: #FFFFFF; }
+      @media only screen and (max-width: 1368px) {
+        #mytheme-index-wrapper .mytheme-main-content-area .mytheme-custom-font {
+          font-size: 110px; } }
+      @media only screen and (max-width: 680px) {
+        #mytheme-index-wrapper .mytheme-main-content-area .mytheme-custom-font {
+          font-size: 60px;
+          line-height: 65px; } }
+  #mytheme-index-wrapper .mytheme-text-button {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    vertical-align: top;
+    background-color: #000000;
+    padding: 27px 0; }
+    #mytheme-index-wrapper .mytheme-text-button .mytheme-text {
+      font-family: "Monument", sans-serif;
+      font-size: 30px;
+      line-height: 37px;
+      color: #fff;
+      text-align: center;
+      text-transform: uppercase;
+      margin: 0 auto;
+      padding: 0 60px !important; }
+      @media only screen and (max-width: 1024px) {
+        #mytheme-index-wrapper .mytheme-text-button .mytheme-text {
+          padding: 0 !important; } }
+
+#mytheme-wrapper-footer {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  padding: 25px 0;
+  background-color: #1A1A1A;
+  bottom: 0;
+  left: 0; }
+  #mytheme-wrapper-footer .site-info p {
+    font-family: "Monument", sans-serif;
+    font-size: 11px;
+    letter-spacing: .2em;
+    font-weight: 300;
+    line-height: 25px;
+    color: #8F8F8F;
+    text-align: center;
+    margin: 0; }
+
+.widget {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .widget .page-wrap {
+    padding: 2rem 0; }
+
+#enquiry {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top;
+  margin-top: 28px;
+  border-top: 1px solid #07070740;
+  padding: 20px 0; }
+  #enquiry .form-group {
+    margin-bottom: 15px; }
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,312 @@
+@import "variable";
+@import "mixins";
+
+/* ==========================================================================
+   Page styles
+   ========================================================================== */
+#mytheme-page-header {
+    @include mythemeRelativeLayout();
+    height: $header-height;
+    background-color: #d1d1d1;
+    z-index: 100; // to be on top of content, if content has negative margin
+    //top: 50px;
+
+    @include qodefScreenSize768 {
+        height: auto;
+        border-bottom: 1px solid #684848;
+    }
+
+    .mytheme-page-header-inner {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        padding: 0 100px;
+
+        @include qodefScreenSize768 {
+            padding: 0;
+        }
+
+        .mytheme-header-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            height: 100%;
+
+            .header-logo {
+                position: relative;
+                height: 100%;
+                display: inline-flex;
+                align-items: center;
+            }
+
+            //Menu navigation
+            .mytheme-header-navigation {
+                position: relative;
+                height: 100%;
+
+                ul {
+
+                    li {
+                        position: relative;
+                        margin: 0;
+                        padding: 0;
+
+                        a {
+                            padding-left: 0;
+                            padding-right: 0;
+                        }
+
+                        .sub-menu {
+                            display: none;
+                            position: absolute;
+                            z-index: 999;
+                            top: 100%;
+                            left: 0;
+                            background: #fff;
+                            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+                            margin: 0;
+                            padding: 0;
+                            list-style-type: none;
+                            width: 200px;
+
+                            a {
+                                color: #000000;
+                                padding: 10px 10px 5px 20px;
+                                display: block;
+                                text-decoration: none;
+
+                                &:hover {
+                                    color: #676767;
+                                    transition: all 0.1s ease-in-out;
+                                }
+                            }
+                        }
+                    }
+
+                    > .menu-item-has-children {
+
+                        &:hover {
+
+                            > .sub-menu {
+                                display: block;
+                                left: -19px;
+                            }
+                        }
+                    }
+
+                    .menu-item-has-children {
+
+                        .sub-menu {
+                            font-family: Monument, sans-serif;
+                            font-size: 14px;
+                            line-height: 21px;
+                            letter-spacing: 0;
+                            color: #000;
+
+                            > .menu-item-has-children:hover {
+
+                                .sub-menu {
+                                    display: block;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                > ul {
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    height: 100%;
+                    white-space: nowrap;
+                    margin-left: auto;
+
+                    > li {
+                        height: 100%;
+                        margin: 0 10px;
+
+                        &:first-child {
+                            margin-left: 0;
+                        }
+
+                        &:last-child {
+                            margin-right: 0;
+                        }
+
+                        > a {
+                            position: relative;
+                            display: flex;
+                            align-items: center;
+                            height: 100%;
+                            @include mythemeMenuLevelOneInitialStyle();
+                            text-decoration: none;
+
+                            &:after {
+                                @include mythemeUnderline(30px);
+                            }
+
+                            &:hover {
+                                @include mythemeMenuLevelOneHoverStyle();
+
+                                &:after {
+                                    @include mythemeUnderlineHover();
+                                }
+                            }
+                        }
+
+                        &.active {
+
+                            > a {
+                                @include mythemeMenuLevelOneHoverStyle();
+
+                                &:after {
+                                    @include mythemeUnderlineHover();
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &.collapse.show {
+                    padding: 20px 0;
+                }
+            }
+        }
+    }
+
+    &.mytheme-dark-header {
+        background-color: transparent;
+        top: 50px;
+
+        .mytheme-page-header-inner {
+
+            .mytheme-header-navigation {
+
+                > ul {
+
+                    > li {
+
+                        > a {
+                            color: #ffffff;
+
+                            &:hover {
+                                @include mythemeMenuLevelOneHoverStyle(#ffffff);
+                            }
+                        }
+
+                        &.active {
+
+                            > a {
+                                @include mythemeMenuLevelOneHoverStyle(#ffffff);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#mytheme-index-wrapper {
+    @include mythemeRelativeLayout();
+
+    .mytheme-main-content-area {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background-image: url("/wp-content/themes/my-theme/assets/img/hero-banner.jpg");
+        background-color: #cccccc;
+        background-size: cover;
+        background-position: center;
+        padding: 0;
+        margin: 0;
+        background-repeat: no-repeat;
+        height: 100vh;
+        margin-top: -80px;
+
+        .mytheme-custom-font {
+            text-align: center;
+            font-size: 213px;
+            line-height: 189px;
+            font-family: $additional-text-font;
+            letter-spacing: 0;
+            color: #FFFFFF;
+
+            @include qodefScreenSize1368 {
+                font-size: 110px;
+            }
+
+            @include qodefScreenSize680 {
+                font-size: 60px;
+                line-height: 65px;
+            }
+        }
+    }
+
+    .mytheme-text-button {
+        @include mythemeRelativeLayout();
+        background-color: #000000;
+        padding: 27px 0;
+
+        .mytheme-text {
+            font-family: $heading-font;
+            font-size: 30px;
+            line-height: 37px;
+            color: #fff;
+            text-align: center;
+            text-transform: uppercase;
+            margin: 0 auto;
+            padding: 0 60px !important;
+
+            @include qodefScreenSize1024 {
+                padding: 0 !important;
+            }
+        }
+    }
+}
+
+#mytheme-wrapper-footer {
+    @include mythemeRelativeLayout();
+    //position: absolute;
+    padding: 25px 0;
+    background-color: #1A1A1A;
+    bottom: 0;
+    left: 0;
+
+    .site-info p {
+        font-family: $heading-font;
+        font-size: 11px;
+        letter-spacing: .2em;
+        font-weight: 300;
+        line-height: 25px;
+        color: #8F8F8F;
+        text-align: center;
+        margin: 0;
+    }
+}
+
+.widget {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    .page-wrap {
+        padding: 2rem 0;
+    }
+}
+
+#enquiry {
+    @include mythemeRelativeLayout();
+    margin-top: 28px;
+    border-top: 1px solid #07070740;
+    padding: 20px 0;
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+}
