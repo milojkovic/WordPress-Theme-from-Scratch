@@ -8,7 +8,7 @@
 
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
-
+ob_start(); //This function will turn output buffering on
 ?>
 
 <!DOCTYPE html>

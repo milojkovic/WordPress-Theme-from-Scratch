@@ -13,6 +13,7 @@ Creating a WordPress Theme from Scratch
 - I implemented SMTP functionality instead of the basic PHP mailer to avoid emails going to spam, as WordPress uses a server that is not properly configured.
 - I created a small shortcode to pull the latest CPT (Custom Post Types) and demonstrated how it works.
 - Finally, I developed a custom search feature for CPT cars.
+- Create form and connect to the API. If the correct user and pass are entered, the token will be stored into the cookies
 
 ---------------------------------------------------------------------
 
@@ -48,3 +49,18 @@ Creating a WordPress theme from scratch can be divided into several key steps. H
 8. Preparing for Distribution:
     - Make sure the theme is ready for distribution, including code review, documentation, and testing on different versions of WordPress.
     - If you plan to distribute the theme, prepare user documentation to help users properly use and customize your theme.
+
+---------------------------------------------------------------------
+Git commands:
+git init
+git add .
+git status
+git commit -m "Add existing project files to Git"
+git branch -M main
+git remote add origin https://github.com/yourname/example-website.git
+git push -u -f origin main
+
+When change files:
+git add .
+git commit -m "Your comment"
+git push

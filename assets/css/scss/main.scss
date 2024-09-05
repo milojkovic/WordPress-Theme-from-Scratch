@@ -67,7 +67,7 @@
                             top: 100%;
                             left: 0;
                             background: #fff;
-                            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+                            box-shadow: 1px 1px 10px #0000001a;
                             margin: 0;
                             padding: 0;
                             list-style-type: none;
@@ -308,5 +308,95 @@
 
     .form-group {
         margin-bottom: 15px;
+    }
+}
+
+.mytheme-404-page {
+    padding: 0 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: calc(100vh - 80px);
+
+    h3 {
+        font-family: $additional-text-font;
+        font-size: 70px;
+        margin-bottom: 25px;
+    }
+
+    p {
+        width: 55%;
+
+        @include qodefScreenSize680 {
+            width: 100%;
+        }
+    }
+}
+
+#mytheme-login-api {
+    @include mythemeRelativeLayout();
+
+    .login-form-container {
+        margin: 50px 0;
+
+        .login-form {
+            width: 500px;
+            border: 1px solid #b1b1b1;
+            padding: 20px;
+            background-color: #dbdbdb;
+            border-radius: 10px;
+
+            p {
+                margin: 0;
+            }
+
+            input {
+                display: block;
+                border: 1px solid #b1b1b1;
+                width: 100%;
+                padding: 10px;
+                margin: 0 auto;
+                border-radius: 5px;
+            }
+
+            label {
+                padding: 4px;
+            }
+
+            .login-remember input {
+                width: auto;
+                display: inline-block;
+            }
+
+            .submit {
+                padding: 10px 0;
+                color: #fff;
+                border-radius: 5px;
+                margin-right: 0;
+                border: none;
+                cursor: pointer;
+
+                input {
+                    cursor: pointer;
+                    width: 100%;
+                }
+
+                &:hover {
+                    opacity: .7;
+                }
+            }
+        }
+
+        .mytheme-test-results {
+            position: relative;
+            width: 500px;
+            border: 1px solid #b1b1b1;
+            padding: 20px;
+            background-color: #f3f3f3;
+            border-radius: 10px;
+            margin-top: 20px;
+        }
     }
 }

@@ -67,7 +67,7 @@
             top: 100%;
             left: 0;
             background: #fff;
-            box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 1px 1px 10px #0000001a;
             margin: 0;
             padding: 0;
             list-style-type: none;
@@ -242,5 +242,71 @@
   padding: 20px 0; }
   #enquiry .form-group {
     margin-bottom: 15px; }
+
+.mytheme-404-page {
+  padding: 0 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: calc(100vh - 80px); }
+  .mytheme-404-page h3 {
+    font-family: "Shockwave", sans-serif;
+    font-size: 70px;
+    margin-bottom: 25px; }
+  .mytheme-404-page p {
+    width: 55%; }
+    @media only screen and (max-width: 680px) {
+      .mytheme-404-page p {
+        width: 100%; } }
+
+#mytheme-login-api {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  vertical-align: top; }
+  #mytheme-login-api .login-form-container {
+    margin: 50px 0; }
+    #mytheme-login-api .login-form-container .login-form {
+      width: 500px;
+      border: 1px solid #b1b1b1;
+      padding: 20px;
+      background-color: #dbdbdb;
+      border-radius: 10px; }
+      #mytheme-login-api .login-form-container .login-form p {
+        margin: 0; }
+      #mytheme-login-api .login-form-container .login-form input {
+        display: block;
+        border: 1px solid #b1b1b1;
+        width: 100%;
+        padding: 10px;
+        margin: 0 auto;
+        border-radius: 5px; }
+      #mytheme-login-api .login-form-container .login-form label {
+        padding: 4px; }
+      #mytheme-login-api .login-form-container .login-form .login-remember input {
+        width: auto;
+        display: inline-block; }
+      #mytheme-login-api .login-form-container .login-form .submit {
+        padding: 10px 0;
+        color: #fff;
+        border-radius: 5px;
+        margin-right: 0;
+        border: none;
+        cursor: pointer; }
+        #mytheme-login-api .login-form-container .login-form .submit input {
+          cursor: pointer;
+          width: 100%; }
+        #mytheme-login-api .login-form-container .login-form .submit:hover {
+          opacity: .7; }
+    #mytheme-login-api .login-form-container .mytheme-test-results {
+      position: relative;
+      width: 500px;
+      border: 1px solid #b1b1b1;
+      padding: 20px;
+      background-color: #f3f3f3;
+      border-radius: 10px;
+      margin-top: 20px; }
 
 /*# sourceMappingURL=main.css.map */
