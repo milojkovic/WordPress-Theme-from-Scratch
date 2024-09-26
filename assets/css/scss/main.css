@@ -14,7 +14,7 @@
   font-family: Monument;
   src: url(/wp-content/themes/my-theme/assets/fonts/MonumentExtended-Regular.otf) format("opentype"); }
 /* ==========================================================================
-   Page styles
+   Navigation styles
    ========================================================================== */
 #mytheme-page-header {
   position: relative;
@@ -153,6 +153,12 @@
     #mytheme-page-header.mytheme-dark-header .mytheme-page-header-inner .mytheme-header-navigation > ul > li.active > a {
       color: #ffffff; }
 
+/* ==========================================================================
+   END Navigation styles
+   ========================================================================== */
+/* ==========================================================================
+   Page styles
+   ========================================================================== */
 #mytheme-index-wrapper {
   position: relative;
   display: inline-block;
@@ -308,5 +314,15 @@
       background-color: #f3f3f3;
       border-radius: 10px;
       margin-top: 20px; }
+
+blockquote.mytheme-page-quote {
+  font-family: "Monument", sans-serif;
+  background-color: #f9f9f9;
+  border-radius: 20px;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 1.8;
+  padding: 30px 50px;
+  max-width: 720px; }
 
 /*# sourceMappingURL=main.css.map */

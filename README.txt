@@ -14,6 +14,8 @@ Creating a WordPress Theme from Scratch
 - I created a small shortcode to pull the latest CPT (Custom Post Types) and demonstrated how it works.
 - Finally, I developed a custom search feature for CPT cars.
 - Create form and connect to the API. If the correct user and pass are entered, the token will be stored into the cookies
+- Created Gutenberg block 'Favorite movie quote' with one text field using WordPress components who is saved in a block attribute.
+Block is set as a dynamic block (output is handled from callback function / server side).
 
 ---------------------------------------------------------------------
 

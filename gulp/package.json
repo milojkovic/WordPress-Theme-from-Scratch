@@ -148,6 +148,10 @@
     "yargs-parser": "^20.2.9"
   },
   "devDependencies": {
+    "@babel/cli": "^7.25.6",
+    "@babel/core": "^7.25.2",
+    "@babel/preset-env": "^7.25.4",
+    "@babel/preset-react": "^7.24.7",
     "auto-prefixer": "^0.4.2",
     "babel-runtime": "^6.26.0",
     "gulp-autoprefixer": "^9.0.0",
@@ -160,7 +164,8 @@
     "terser": "^5.31.6"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src --out-dir js --watch"
   },
   "author": "Milos",
   "license": "ISC"

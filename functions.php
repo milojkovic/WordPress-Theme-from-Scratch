@@ -274,7 +274,8 @@ function search_query() {
 	return new WP_Query( $args );
 }
 
-
+//Include file for custom gutenberg block
+include_once get_template_directory() . '/includes/blocks/favorite-quote/block-favorite-quote.php';
 
 
 

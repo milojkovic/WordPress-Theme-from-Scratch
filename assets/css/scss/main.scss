@@ -2,7 +2,7 @@
 @import "mixins";
 
 /* ==========================================================================
-   Page styles
+   Navigation styles
    ========================================================================== */
 #mytheme-page-header {
     @include mythemeRelativeLayout();
@@ -211,6 +211,14 @@
     }
 }
 
+/* ==========================================================================
+   END Navigation styles
+   ========================================================================== */
+
+/* ==========================================================================
+   Page styles
+   ========================================================================== */
+
 #mytheme-index-wrapper {
     @include mythemeRelativeLayout();
 
@@ -399,4 +407,15 @@
             margin-top: 20px;
         }
     }
+}
+
+blockquote.mytheme-page-quote {
+    font-family: $heading-font;
+    background-color: #f9f9f9;
+    border-radius: 20px;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.8;
+    padding: 30px 50px;
+    max-width: 720px;
 }
