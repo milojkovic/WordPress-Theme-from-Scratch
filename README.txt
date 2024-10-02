@@ -14,9 +14,12 @@ Creating a WordPress Theme from Scratch
 - I created a small shortcode to pull the latest CPT (Custom Post Types) and demonstrated how it works.
 - Finally, I developed a custom search feature for CPT cars.
 - Create form and connect to the API. If the correct user and pass are entered, the token will be stored into the cookies
-- Created Gutenberg block 'Favorite movie quote' with one text field using WordPress components who is saved in a block attribute.
-Block is set as a dynamic block (output is handled from callback function / server side).
-
+- Created Gutenberg block 'Favorite movie quote' with one text field using WordPress components who is saved in a block attribute. Block is set as a dynamic block (output is handled from callback function / server side).
+- The 'Movie Review' plugin was created, a custom post type and taxonomy were added, and a custom post field was added using the ACF plugin.
+The single-movie_review page was added to be displayed on the front end. After activating the plugin, a page is automatically created.
+- The 'Movies' plugin was created from scratch. It was done this way to demonstrate the difference in code between working with helper
+plugins and without them. A custom post type was created that can also be used for REST API. Three custom post fields and three meta boxes for input were created.
+Two options for input were made, one through the Gutenberg panel and the other through WordPress components. Everything is displayed on the front end.
 ---------------------------------------------------------------------
 
 Creating a WordPress theme from scratch can be divided into several key steps. Here’s how the process might look:
